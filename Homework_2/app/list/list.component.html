@@ -1,0 +1,4 @@
+<section class="todo-list" *ngIf="true">
+    <todo-item *ngFor="let todo of listTodos; let i = index" [todo]="todo" (onToggled)="onToggle($event)" (onDeleted)="onDelete($event)"
+               ></todo-item>
+</section>

@@ -1,0 +1,15 @@
+<div class="todo-item" [ngClass]="{'completed':todo.status}">
+    <!--<div class="todo-item" *ngFor="let todo of todos" [class.status]="todo.status">-->
+    <button class="checkbox icon" (click)="onToggle(todo)">
+        <i class="material-icons" *ngIf="todo.status">check_box</i>
+        <i class="material-icons" *ngIf="!todo.status">check_box_outline_blank</i>
+        <!--<i class="material-icons">{{todo.status ? 'check_box' : 'check_box_outline_blank'}}</i>-->
+        <!--<i class="material-icons" [innerText]="todo.status ? 'check_box' : 'check_box_outline_blank'"></i>-->
+    </button>
+    <span class="title">{{todo.title}}</span>
+    <div class="actions">
+        <button class="delete icon" (click)="onDelete(todo)">
+            <i class="material-icons">delete</i>
+        </button>
+    </div>
+</div>

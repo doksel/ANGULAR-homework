@@ -1,0 +1,11 @@
+<header>
+    <img src="img/angular.svg" />
+    <h1>{{title}}</h1>
+</header>
+<main>
+    <form-todo (onCreated)="create($event)"></form-todo>
+    <todo-list [listTodos]="appTodos" 
+                (onToggled)="toggle($event)"
+                (onDeleted)="delete($event)">
+    </todo-list>
+</main>  
