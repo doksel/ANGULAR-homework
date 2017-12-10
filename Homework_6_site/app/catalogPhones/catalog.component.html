@@ -1,0 +1,17 @@
+<h1 class="text-center">{{title}}</h1>
+<div>
+    <ul class="list-group phones" *ngFor="let phone of phones">
+        <li class="list-group-item">
+            <span><h2>{{phone.name}}</h2></span><br>
+            <span><img src="{{phone.img}}"  alt="img phone"/></span><br>
+            <span><b>Type phone: </b>{{phone.typephone}}</span><br>
+            <span><b>System: </b>{{phone.system}}</span><br>
+            <span><b>Memory: </b>{{phone.memory}}</span><br>
+            <span><b>Screen: </b>{{phone.screen}}</span><br>
+            <span><b>Camera: </b>{{phone.camera}}</span>
+        </li>
+    </ul>
+</div><br>
+<ul>
+    <li *ngIf="phones.length===0"><span><h2>Товара нет</h2></span></li>
+</ul><br>

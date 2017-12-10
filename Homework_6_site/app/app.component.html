@@ -1,0 +1,18 @@
+<div class="container">
+    <nav style="margin-bottom:20px;" class="nav navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a routerLink="/">Главная</a></li>
+                <li><a [routerLink]="'/catalog'">Каталог телефонов</a></li>
+                <li><a [routerLink]="'/create'">Добавить новый телефоны</a></li>
+                <li><a [routerLink]="'/put'">Изменить телефоны</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <h1 class="text-center">Mobil shop</h1>
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

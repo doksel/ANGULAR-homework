@@ -1,0 +1,48 @@
+<div class="col-md-12">
+    <h1 class="text-center">Change phones</h1>
+    <div>
+        <ul class="list-group phones" *ngFor="let phone of phones">
+            <li class="list-group-item">
+                <span><h2>{{phone.name}}</h2></span><br>
+                <span><img src="{{phone.img}}"  alt="img phone"/></span><br>
+                <span><b>Type phone: </b>{{phone.typephone}}</span><br>
+                <span><b>System: </b>{{phone.system}}</span><br>
+                <span><b>Memory: </b>{{phone.memory}}</span><br>
+                <span><b>Screen: </b>{{phone.screen}}</span><br>
+                <span><b>Camera: </b>{{phone.camera}}</span>
+            </li>
+                <button class="btn btn-info" (click)="setPhone(phone, namePhone, typephonePhone, systemPhone, memoryPhone, screenPhone, cameraPhone)">Change</button>
+                <button class="btn btn-danger" (click)="deletePhone(phone)">Delete</button>
+        </ul>
+    </div>
+</div>
+
+<div class="col-md-4" id="changePhone">
+    <form role="form">
+        <div class="form-group">
+            <label for="namePhone">Name phone</label>
+            <input type="text" class="form-control" id="namePhone"  [(ngModel)]="namePhone" placeholder="Модель телефона" name="namePhone">
+        </div>
+        <div class="form-group">
+            <label for="typephonePhone">Type phone</label>
+            <input type="text" class="form-control" id="typephonePhone" [(ngModel)]="typephonePhone" placeholder="Тип телефона" name="typephonePhone">
+        </div>
+        <div class="form-group">
+            <label for="systemPhone">System phone</label>
+            <input type="text" class="form-control" id="systemPhone" [(ngModel)]="systemPhone" placeholder="Система" name="systemPhone">
+        </div>
+        <div class="form-group">
+            <label for="memoryPhone">Memory phone</label>
+            <input type="text" class="form-control" id="memoryPhone" [(ngModel)]="memoryPhone" placeholder="Память" name="memoryPhone">
+        </div>
+        <div class="form-group">
+            <label for="screenPhone">Screen phone</label>
+            <input type="text" class="form-control" id="screenPhone" [(ngModel)]="screenPhone" placeholder="Размер экрана" name="screenPhone">
+        </div>
+        <div class="form-group">
+            <label for="cameraPhone">Camera phone</label>
+            <input type="text" class="form-control" id="cameraPhone" [(ngModel)]="cameraPhone" placeholder="Камера" name="cameraPhone">
+        </div>
+        <button class="btn btn-success" (click)="setPhone(phone, namePhone, typephonePhone, systemPhone, memoryPhone, screenPhone, cameraPhone)">Create</button>
+    </form>
+</div>
