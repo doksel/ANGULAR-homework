@@ -1,0 +1,13 @@
+<header>
+    <img src="img/angular.svg" />
+    <h1 redfont="">{{title}}</h1>
+</header>
+<main>
+    <input  type="text" style="margin-bottom: 15px" [ngModel]="value2" (ngMoelChange)="onValue2Send($event)">
+    <form-todo (onCreated)="create($event)" [(userValue)]="value"
+               [value2]="value2" (userValueSend)="onValue2Send($event)"></form-todo>
+    <todo-list [listTodos]="appTodos"
+                (onToggled)="toggle($event)"
+                (onDeleted)="delete($event)">
+    </todo-list>
+</main>

@@ -1,0 +1,5 @@
+<form class="todo-form" (ngSubmit)="onCreate(newTaskTitle);formTodo.reset()" #formTodo="ngForm">
+    <input  redfont="" type="text" [(ngModel)]="newTaskTitle" [ngModelOptions]="{standalone: true}" [ngModel]="value2"
+    (ngModelChange)="onValueSend($event)">
+    <button redfont="" type="submit" >Добавить</button>
+</form>
