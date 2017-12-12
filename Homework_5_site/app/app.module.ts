@@ -8,15 +8,26 @@ import {AppComponent} from './app.component';
 import {CatalogComponent} from './catalogPhones/catalog.component';
 import {CreateComponent} from './createPhones/create.component';
 import {PutComponent} from './putPhones/put.component';
-
+//
+import {DemoModalServiceStaticComponent} from './putPhones/modal.component';
+import { ModalModule } from 'ngx-bootstrap';
+//
 @NgModule({
     imports:[BrowserModule,
-            FormsModule,
-            HttpModule],
+        FormsModule,
+        HttpModule,
+        //
+        ModalModule.forRoot()
+        //
+    ],
     declarations:[AppComponent,
-                  CatalogComponent,
-                  CreateComponent,
-                  PutComponent],
+        CatalogComponent,
+        CreateComponent,
+        PutComponent,
+        //
+        DemoModalServiceStaticComponent
+        //
+    ],
     providers:[PhonesListServise],
     bootstrap:[AppComponent]
 })

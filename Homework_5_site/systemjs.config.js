@@ -14,6 +14,10 @@
             '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
             '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
             '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
+            //
+            'moment': 'node_modules/moment',
+            'ng2-bootstrap':              'node_modules/ng2-bootstrap',
+            //
 
             'rxjs': 'npm:rxjs',
         },
@@ -24,7 +28,11 @@
             },
             rxjs: {
                 defaultExtension: 'js'
-            }
+            },
+            //
+            'ng2-bootstrap':              { format: 'cjs', main: 'bundles/ng2-bootstrap.umd.js', defaultExtension: 'js' },
+            'moment':                     { main: 'moment.js', defaultExtension: 'js' },
+            //
         }
     });
 })(this);
